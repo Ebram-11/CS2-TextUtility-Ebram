@@ -1,5 +1,5 @@
 Hello Everyone,
-This is a library build to manipulate c-style string, we have multiple functions as follows:
+This is a program and a library built to manipulate c-style string, we have multiple functions as follows:
 
 int wordCount(const char* str); --> this function gives you the number of words in a string.
 
