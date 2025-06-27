@@ -9,4 +9,4 @@ set(SOURCE_FILES
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_executable(Assignment_2 ${SOURCE_FILES})
+add_executable(test ${SOURCE_FILES})
