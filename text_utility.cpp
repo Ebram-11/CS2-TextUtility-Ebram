@@ -83,7 +83,7 @@ bool isPalindrome(const char* str) {
 void toUpperCase(char* str) {
     if (!str) return;
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') {
+        if (str[i] >= 'a' && str[i] <= 'z') { //Uses ASCII values to to change the character values into upper values
             str[i] -= 32;
         }
     }
@@ -92,7 +92,7 @@ void toUpperCase(char* str) {
 void toLowerCase(char* str) {
     if (!str) return;
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 'A' && str[i] <= 'Z') {
+        if (str[i] >= 'A' && str[i] <= 'Z') { //Uses ASCII values to to change the character values into lower values
             str[i] += 32;
         }
     }
@@ -101,12 +101,13 @@ void toLowerCase(char* str) {
 int substringOccurrence(const char* str, const char* substr) {
     if (!str || !substr || substr[0] == '\0') return 0;
     int count = 0;
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i] != '\0'; i++) { //used to iterate over the string
         int j = 0;
-        while (substr[j] != '\0' && str[i + j] == substr[j]) {
+        while (substr[j] != '\0' && str[i + j] == substr[j]) { //The while loops is used to iterate over the the substring 
             j++;
         }
-        if (substr[j] == '\0') {
+        if (substr[j] == '\0') { /* If the while loop exited and reached the if statement with j indicating the null 
+                                    terminator for the substring, then the while iterated over the whole substring meaning the substring exists in the string*/
             count++;
         }
     }
