@@ -1,32 +1,41 @@
 #include <iostream>
-#include "Text_Utility.h"
+#include <cstring>
+#include "text_utility.h"
 
 int main() {
-    char text1[] = "Hello World! This is a C++ test.";
-    char text2[] = "Madam";
-    char text3[] = "This is a test. This is only a test.";
+    char text[1000];
+    std::cout << "Enter a string: ";
+    std::cin.getline(text, 1000);
 
-    std::cout << "Original text: " << text1 << "\n";
-    std::cout << "Word count: " << wordCount(text1) << "\n";
-    std::cout << "Character count: " << characterCount(text1) << "\n";
+    std::cout << "\n--- Analysis ---\n";
+    std::cout << "Word count: " << wordCount(text) << "\n";
+    std::cout << "Character count: " << characterCount(text) << "\n";
 
     int vowels, consonants;
-    vowelConsonantCount(text1, vowels, consonants);
+    vowelConsonantCount(text, vowels, consonants);
     std::cout << "Vowels: " << vowels << ", Consonants: " << consonants << "\n";
 
-    reverseString(text1);
-    std::cout << "Reversed text: " << text1 << "\n";
+    char reversed[1000];
+    std::strcpy(reversed, text);
+    reverseString(reversed);
+    std::cout << "Reversed: " << reversed << "\n";
 
-    std::cout << "Is 'Madam' a palindrome? " << (isPalindrome(text2) ? "Yes" : "No") << "\n";
+    std::cout << "Is palindrome? " << (isPalindrome(text) ? "Yes" : "No") << "\n";
 
-    toUpperCase(text2);
-    std::cout << "Uppercase: " << text2 << "\n";
+    char upper[1000];
+    std::strcpy(upper, text);
+    toUpperCase(upper);
+    std::cout << "Uppercase: " << upper << "\n";
 
-    toLowerCase(text2);
-    std::cout << "Lowercase: " << text2 << "\n";
+    char lower[1000];
+    std::strcpy(lower, text);
+    toLowerCase(lower);
+    std::cout << "Lowercase: " << lower << "\n";
 
-    const char* search = "test";
-    std::cout << "Occurrences of '" << search << "' in text3: " << substringOccurrence(text3, search) << "\n";
+    char substring[100];
+    std::cout << "Enter a substring to search for: ";
+    std::cin.getline(substring, 100);
+    std::cout << "Occurrences of '" << substring << "': " << substringOccurrence(text, substring) << "\n";
 
     return 0;
-} 
+}
