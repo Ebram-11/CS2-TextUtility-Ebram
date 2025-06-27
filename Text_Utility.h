@@ -15,11 +15,11 @@ School of Sciences and Eng.
 - Case Conversion to Lowercase (in-place)
 - Substring Occurrence Count*/
 
-int wordcount(char arr[]);
-int vcount(char arr[]);
-int ccount(char arr[]);
-void reverse(char arr[]);
-bool Ispalindrome(char arr[]);
-void Upper(char arr[]);
-void Lower(char arr[]);
-int Substring(char arr[]);
+int wordCount(const char* str);
+int characterCount(const char* str);
+void vowelConsonantCount(const char* str, int& vowels, int& consonants);
+void reverseString(char* str);
+bool isPalindrome(const char* str);
+void toUpperCase(char* str);
+void toLowerCase(char* str);
+int substringOccurrence(const char* str, const char* substr);
