@@ -23,3 +23,4 @@ bool isPalindrome(const char* str);
 void toUpperCase(char* str);
 void toLowerCase(char* str);
 int substringOccurrence(const char* str, const char* substr);
+int specialCharacterCount(const char* str);

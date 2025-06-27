@@ -113,3 +113,16 @@ int substringOccurrence(const char* str, const char* substr) {
     }
     return count;
 }
+
+int specialCharacterCount(const char* str) { // New functionality I added, to work with branching
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (!((str[i] >= 'A' && str[i] <= 'Z') ||
+              (str[i] >= 'a' && str[i] <= 'z') ||
+              (str[i] >= '0' && str[i] <= '9') ||
+              str[i] == ' ')) {                 // Uses ASCII table values to check if it is a special character
+            count++;
+        }
+    }
+    return count;
+}

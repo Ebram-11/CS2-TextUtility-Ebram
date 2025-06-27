@@ -36,6 +36,7 @@ int main() {
     std::cout << "Enter a substring to search for: ";
     std::cin.getline(substring, 100);
     std::cout << "Occurrences of '" << substring << "': " << substringOccurrence(text, substring) << "\n";
-
+    int numberofspecial = numberofspecial(text);
+    std::cout << "Occurrences of special characters: " << "'" << numberofspecial <<"'" << "\n";
     return 0;
 }
